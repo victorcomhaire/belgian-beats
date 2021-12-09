@@ -81,6 +81,9 @@ const Movie = ({ data, level }) => {
           <h1 className={styles.title}>
             {content.title}
           </h1>
+          <div className={styles.rating}>
+            Rating: {content.rating}
+          </div>
           <div className={styles.genrelist}>
             {genres.map((item, index) => (
               <div className={styles.genre}>
@@ -92,7 +95,7 @@ const Movie = ({ data, level }) => {
           </div>
           <div className={styles.imagegallery}>
             <InPageSlideshow pictures={pictures}></InPageSlideshow>
-          </div>  
+          </div>
 
           <div className={styles.short}>
             {render(content.short)}
