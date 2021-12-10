@@ -1,0 +1,104 @@
+@import '../styles/colors';
+
+.song {
+  .mainpicture {
+    width: 100%;
+    height: 500px;
+    background-size: cover;
+    background-position: center;
+    box-shadow: inset 0 0 0px 10px #000;
+    margin-bottom: 40px;
+  }
+  
+  .artists {
+    font-weight: 800;
+    font-size: 1.4em;
+  }
+
+  .date {
+    padding: 5px 20px;
+    background-color: #e4e3e3;
+    max-width: 120px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-weight: 700;
+  }
+
+  
+  .short {
+    font-weight: 500;
+  }
+
+  .genrelist {
+    display: flex;
+    margin-bottom: 20px;
+
+    .genre {
+      padding: 5px 20px;
+      background-color: #84ee89;
+      max-width: 100px;
+      margin-right: 10px;
+      font-weight: 700;
+      margin-top: 20px;
+    }
+  }
+
+  .spotifylink {
+    padding: 10px 20px 10px 20px; 
+    background-color: rgb(255, 251, 22);
+    border-radius: 20px;
+    font-weight: 800;
+    margin-bottom: 40px;
+    max-width: 95px;
+  }
+
+
+  .peoplesegment {
+    margin-top:40px;
+    .title {
+
+      font-size: 1.4em;
+      font-weight: 800;
+      margin-bottom: 20px;
+
+    }
+
+    .content {}
+  }
+
+  .title {}
+
+  .summary {}
+
+  .synopsis {}
+
+  .introduction {}
+
+  .main_poster {
+    img {}
+  }
+
+  .writers {
+    .writer {}
+  }
+
+  .directors {
+    .director {}
+  }
+
+  .stars {
+    .star {}
+  }
+
+  .genres {
+    .genre {}
+  }
+
+  .pictures {
+    .picture {}
+  }
+
+  .trailers {
+    .trailer {}
+  }
+}
