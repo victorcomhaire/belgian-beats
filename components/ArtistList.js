@@ -5,12 +5,23 @@ import styles from "../styles/ArtistList.module.scss"
 import { getAllItems } from "../utils/storyblok"
 import SmallCardList from "./SmallCardList"
 
-const ArtistList = ({ data, level }) => {
+const ArtistList = ({ data, level, locale }) => {
   if (level === 'data') {
     var content = data.story.content;
   } else {
     var content = data;
   }
+  const [sortby, setSortby] = useState();
+
+  function updateSortby(sortby){
+    setSortby(sortby);
+    getAllItems('movie', locale, sortby).then(
+      function (result) {
+        setItems(result.data.stories);
+      });
+  }
+
+
   const [items, setItems] = useState([]);
   getAllItems('artist').then(
     function (result) {
@@ -18,10 +29,25 @@ const ArtistList = ({ data, level }) => {
     });
 
   return (
-
-    <div>
-      {items && items.length > 0 && <SmallCardList items={items} type="personality"></SmallCardList>}
+<div className={styles.list}>
+      <div className={styles.orderbypicker}>
+        <div className={styles.orderbytitle}>
+          Order by
+        </div>
+        <div className={styles.orderbyoptions} >
+          <div className={styles.orderbyoption} onClick={() => updateSortby("first_published_at:desc")}>
+            Date
+          </div>
+          <div className={styles.orderbyoption} onClick={() => updateSortby("name:asc")}>
+            Title
+          </div>
+        </div>
+      </div>
+      <div>
+        {items && items.length > 0 && <SmallCardList items={items} type="movie"></SmallCardList>}
+      </div>
     </div>
+    
 
   );
 };
