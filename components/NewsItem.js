@@ -7,16 +7,16 @@ import SmallCardList from "./SmallCardList"
 
 
 const NewsItem = ({ data, level }) => {
-  var movies = [];
-  var personalities = [];
+  var songs = [];
+  var artists = [];
   //enriching data
   if (level === 'data') {
     var content = data.story.content;
-    movies = data.rels.filter(obj => {
-      return content.movies.includes(obj.uuid);
+    songs = data.rels.filter(obj => {
+      return content.songs.includes(obj.uuid);
     });
-    personalities = data.rels.filter(obj => {
-      return content.personalities.includes(obj.uuid);
+    artists = data.rels.filter(obj => {
+      return content.artists.includes(obj.uuid);
     });
   } else {
     var content = data;
@@ -38,8 +38,8 @@ const NewsItem = ({ data, level }) => {
           <div className={styles.article}>
             {render(content.article)}
           </div>
-          {movies && movies.length > 0 && <SmallCardList items={movies} title="Related movies" type="movie"></SmallCardList>}
-          {personalities && personalities.length > 0 && <SmallCardList items={personalities} title="Related personalities" type="personality"></SmallCardList>}
+          {songs && songs.length > 0 && <SmallCardList items={songs} title="Related songs" type="song"></SmallCardList>}
+          {artists && artists.length > 0 && <SmallCardList items={artists} title="Related artists" type="artist"></SmallCardList>}
       
         </div>
       </main>

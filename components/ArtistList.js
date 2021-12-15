@@ -20,7 +20,7 @@ const ArtistList = ({ data, level }) => {
   return (
 
     <div>
-      {items && items.length > 0 && <SmallCardList items={items} type="personality"></SmallCardList>}
+      {items && items.length > 0 && <SmallCardList items={items} type="artist"></SmallCardList>}
     </div>
 
   );

@@ -23,7 +23,7 @@ const ConcertList = ({ data, level, locale }) => {
   return (
     <div className={styles.list}>
       <div>
-        {items && items.length > 0 && <SmallCardList items={items} type="movie"></SmallCardList>}
+        {items && items.length > 0 && <SmallCardList items={items} type="concert"></SmallCardList>}
       </div>
     </div>
 
