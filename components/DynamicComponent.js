@@ -63,8 +63,7 @@ const Components = {
   'artist': Artist,
   'artistlist': ArtistList,
   'song': Song,
-  'songlist': SongList
-
+  'songlist': SongList,
 }
 
 
