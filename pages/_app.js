@@ -14,7 +14,7 @@ function MyApp({ Component, pageProps }) {
     const handleRouteChange = (url) => {
       //ga.pageview(url)
     }
-    //hotjar.initialize(XXXXXXXX, XXX)
+    hotjar.initialize(2748986, 6)
     //When the component is mounted, subscribe to router changes
     //and log those page views
     router.events.on('routeChangeComplete', handleRouteChange)
