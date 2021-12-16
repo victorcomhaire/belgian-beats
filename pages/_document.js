@@ -6,8 +6,8 @@ export default class MyDocument extends Document {
       <Html>
         <Head>
       
-         {* Global Site Tag (gtag.js) - Google Analytics */}
-              {* <script
+         {/* Global Site Tag (gtag.js) - Google Analytics */}
+              {/* <script
                 async
                 src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
               />
@@ -43,17 +43,6 @@ export default class MyDocument extends Document {
 
           <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1446177920850529"
             crossorigin="anonymous"></script>
-          <!-- Hotjar Tracking Code for https://imdbplus-ebon.vercel.app/ -->
-          <script>
-              (function(h,o,t,j,a,r){
-                  h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-                  h._hjSettings={hjid:2748986,hjsv:6};
-                  a=o.getElementsByTagName('head')[0];
-                  r=o.createElement('script');r.async=1;
-                  r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
-                  a.appendChild(r);
-              })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
-          </script>
           
         </Head>
         <body>
