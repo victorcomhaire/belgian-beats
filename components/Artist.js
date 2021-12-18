@@ -5,12 +5,21 @@ import styles from "../styles/Artist.module.scss"
 import { getData } from "../utils/storyblok"
 import InPageSlideshow from "./InPageSlideshow"
 import RelatedItemGallery from "./RelatedItemGallery"
+import SmallCardList from "./SmallCardList"
 
 const Artist = ({ data, level }) => {
+  var songs = [];
+  var concerts = [];
   if (level === 'data') {
     var content = data.story.content;
     var countries = data.rels.filter(obj => {
       return content.nationality.includes(obj.uuid);
+    });
+    songs = data.rels.filter(obj => {
+      return content.songs.includes(obj.uuid);
+    });
+    concerts = data.rels.filter(obj => {
+      return content.concerts.includes(obj.uuid);
     });
   } else {
     var content = data;
@@ -58,6 +67,8 @@ const Artist = ({ data, level }) => {
           <div className={styles.bio}>
             {render(content.bio)}
           </div>
+          {songs && songs.length > 0 && <SmallCardList items={songs} title="Songs" type="song"></SmallCardList>}
+          {concerts && concerts.length > 0 && <SmallCardList items={concerts} title="Concerts" type="concert"></SmallCardList>}
           {products&&products.length>0&&<RelatedItemGallery items={products} title="Merchandise" type="product"></RelatedItemGallery>}
           {newsitems&&newsitems.length>0&&<RelatedItemGallery items={newsitems} title="News" type="newsitem"></RelatedItemGallery>}
         </div>

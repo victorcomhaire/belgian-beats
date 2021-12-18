@@ -16,6 +16,7 @@ import SmallCardList from "./SmallCardList"
 
 const Song = ({ data, level }) => {
   var locale = 'en';
+  var artists = [];
   //enriching data
   if (level === 'data') {
     locale = data.story.lang;
@@ -26,6 +27,9 @@ const Song = ({ data, level }) => {
     var genres = data.rels.filter(obj => {
       return content.genres.includes(obj.uuid);
     })
+    artists = data.rels.filter(obj => {
+      return content.artists.includes(obj.uuid);
+    });
   } else {
     var content = data;
   }
@@ -53,9 +57,6 @@ const Song = ({ data, level }) => {
           <h1 className={styles.title}>
             {content.title}
           </h1>
-          <div className={styles.artists}>
-            {render(content.artists)}
-          </div>
           <div className={styles.genrelist}>
             {genres.map((item, index) => (
               <div className={styles.genre}>
@@ -71,6 +72,7 @@ const Song = ({ data, level }) => {
           <div className={styles.short}>
             {render(content.short)}
           </div>
+          {artists && artists.length > 0 && <SmallCardList items={artists} title="Related artists" type="artist"></SmallCardList>}
         </div>
       </main>
     </SbEditable>
