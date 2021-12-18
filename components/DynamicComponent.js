@@ -30,7 +30,6 @@ import Artist from './Artist'
 import ArtistList from './ArtistList'
 import Song from './Song'
 import SongList from './SongList'
-import TopConcerts from './TopConcerts'
 
 const Components = {
   'teaser': Teaser,
@@ -65,7 +64,6 @@ const Components = {
   'artistlist': ArtistList,
   'song': Song,
   'songlist': SongList,
-  'topconcerts': TopConcerts
 }
 
 
