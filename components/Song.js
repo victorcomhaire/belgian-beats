@@ -72,7 +72,7 @@ const Song = ({ data, level }) => {
           <div className={styles.short}>
             {render(content.short)}
           </div>
-          {artists && artists.length > 0 && <SmallCardList items={artists} title="Related artists" type="artist"></SmallCardList>}
+          {artists && artists.length > 0 && <SmallCardList items={artists} title="Artists" type="artist"></SmallCardList>}
         </div>
       </main>
     </SbEditable>

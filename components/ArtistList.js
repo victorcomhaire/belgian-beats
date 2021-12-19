@@ -35,9 +35,9 @@ const ArtistList = ({ data, level, locale }) => {
           Order by
         </div>
         <div className={styles.orderbyoptions} >
-          <div className={styles.orderbyoption} onClick={() => updateSortby("first_published_at:desc")}>
+          {/* <div className={styles.orderbyoption} onClick={() => updateSortby("first_published_at:desc")}>
             Date
-          </div>
+          </div> */}
           <div className={styles.orderbyoption} onClick={() => updateSortby("name:asc")}>
             Title
           </div>
