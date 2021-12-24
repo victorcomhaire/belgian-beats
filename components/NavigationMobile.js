@@ -38,7 +38,7 @@ const NavigationMobile = ({ locale, locales }) => {
         <div className={styles.navlogo}>
           <a href="/">
             <img
-              src="https://a.storyblok.com/f/138540/160x180/c9831b8609/belgian_beats_logo.png"
+              src="https://a.storyblok.com/f/138540/160x180/7871b3844a/belgian_beats_logo.png"
               alt="Belgian Beats Logo"
               className=""
             />
